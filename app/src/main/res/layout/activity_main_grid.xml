@@ -77,6 +77,4 @@
         android:autofillHints="@string/HintText"/>
 
 
-
-
 </GridLayout>
