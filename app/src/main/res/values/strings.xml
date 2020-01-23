@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Android Lab1</string>
+    <string name="app_name">Android Labs</string>
     <string name="hello_message">Hello World!</string>
     <string name="ButtonText">I\’m a button</string>
 
@@ -9,4 +9,9 @@
     <string name="ImageBtnDescription">National Flag</string>
     <string name="SwitchText">Switch on / off</string>
     <string name="HintText">Type here</string>
+    <string name="switch_on"> The switch is on</string>
+    <string name="switch_off">Type switch is off </string>
+    <string name="toast_message"> Here is more information </string>
+    <string name="check_off">The checkbox is on</string>
+    <string name="check_on">Type checkbox is off</string>
 </resources>
