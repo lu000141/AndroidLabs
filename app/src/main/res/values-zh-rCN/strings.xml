@@ -11,4 +11,10 @@
     <string name="ImageBtnDescription">国旗</string>
     <string name="SwitchText">设置 开/关</string>
     <string name="HintText">这里输入</string>
+
+    <string name="switch_on"> 开关 开</string>
+    <string name="switch_off">开关 关</string>
+    <string name="toast_message"> 这里有更多信息 </string>
+    <string name="check_off">复选框 选中</string>
+    <string name="check_on">复选框 不选</string>
 </resources>
