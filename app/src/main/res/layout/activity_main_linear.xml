@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/HeaderText"
@@ -18,7 +18,7 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill"
@@ -26,7 +26,7 @@
             android:text="@string/ButtonText2" />
 
         <CheckBox
-            android:id="@+id/checkBox3"
+            android:id="@+id/checkBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill"
@@ -41,7 +41,7 @@
         android:layout_height="wrap_content">
 
         <ImageButton
-            android:id="@+id/imageButton3"
+            android:id="@+id/imageButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill"
@@ -50,7 +50,7 @@
             app:srcCompat="@drawable/flag" />
 
         <Switch
-            android:id="@+id/switch3"
+            android:id="@+id/switch1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="fill"
@@ -60,7 +60,7 @@
     </LinearLayout>
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
