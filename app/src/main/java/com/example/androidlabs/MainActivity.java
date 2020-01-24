@@ -27,9 +27,9 @@ public class MainActivity extends AppCompatActivity {
         // setContentView loads objects onto the screen.
         // Before this function, the screen is empty.
 
-     //  setContentView(R.layout.activity_main_linear);
-       setContentView(R.layout.activity_main_grid);
-      //  setContentView(R.layout.activity_main_relative);
+      setContentView(R.layout.activity_main_linear);
+      // setContentView(R.layout.activity_main_grid);
+       // setContentView(R.layout.activity_main_relative);
 
         //Now that the screen was loaded, use findViewByid() to
         // get load the objects in Java:
