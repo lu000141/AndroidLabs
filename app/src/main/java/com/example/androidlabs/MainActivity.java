@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         String email = prefs.getString(key, ""); ;
 
         // push reserved email to edit control
-        EditText editEmail = findViewById(R.id.editTextEmail);
+        editEmail = findViewById(R.id.editTextEmail);
         editEmail.setText(email);
 
         Button btnLogin = findViewById(R.id.login);
