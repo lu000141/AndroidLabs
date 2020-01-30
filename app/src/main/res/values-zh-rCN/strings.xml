@@ -17,4 +17,19 @@
     <string name="toast_message"> 这里有更多信息 </string>
     <string name="check_off">复选框 选中</string>
     <string name="check_on">复选框 不选</string>
+
+    <string name="email_notification">请输入你的邮箱地址：</string>
+    <string name="email_hint">这里输入邮箱</string>
+    <string name="password_notification">请输入你的密码：</string>
+    <string name="login_button_text">登陆</string>
+
+
+    <string name="preference_file_key">FileName</string>
+    <string name="preference_reserved_email">EmailAddress</string>
+    <string name="profile_header_label">你的资料</string>
+    <string name="profile_name_label">你的姓名：</string>
+    <string name="profile_email_label">你的邮箱：</string>
+    <string name="profile_picure_label">你的图片：</string>
+    <string name="name_hint">这里输入姓名</string>
+    <string name="take_picture_hint">按上面的按钮打开相机拍照</string>
 </resources>
