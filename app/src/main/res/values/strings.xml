@@ -14,4 +14,20 @@
     <string name="toast_message"> Here is more information </string>
     <string name="check_off">The checkbox is on</string>
     <string name="check_on">Type checkbox is off</string>
+
+    <string name="email_notification">Enter your Email address:</string>
+    <string name="email_hint">Type email here</string>
+    <string name="password_notification">Type your password:</string>
+    <string name="login_button_text">LOGIN</string>
+
+
+    <string name="preference_file_key">FileName</string>
+    <string name="preference_reserved_email">EmailAddress</string>
+    <string name="profile_header_label">Your profile</string>
+    <string name="profile_name_label">Your name:</string>
+    <string name="profile_email_label">Your email:</string>
+    <string name="profile_picure_label">Your picture:</string>
+    <string name="name_hint">Type your name here</string>
+    <string name="take_picture_hint">Click the button above to take a picture</string>
+
 </resources>
