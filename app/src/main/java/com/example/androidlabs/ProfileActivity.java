@@ -40,7 +40,7 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Log.e(ACTIVITY_NAME, "In function:" + "onCreate()");
+      Log.e(ACTIVITY_NAME, "In function:" + "onCreate()");
 
         setContentView(R.layout.activity_profile);
 
