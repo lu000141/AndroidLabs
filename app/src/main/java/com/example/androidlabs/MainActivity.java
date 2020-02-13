@@ -51,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();
 
         SharedPreferences.Editor editor  = prefs.edit();
-
         String key = getString(R.string.preference_reserved_email);
         String emailtyped = editEmail.getText().toString();
         editor.putString(key, emailtyped);
