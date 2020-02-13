@@ -41,7 +41,7 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-      Log.e(ACTIVITY_NAME, "In function:" + "onCreate()");
+        Log.e(ACTIVITY_NAME, "In function:" + "onCreate()");
 
         setContentView(R.layout.activity_profile);
 
@@ -70,9 +70,6 @@ public class ProfileActivity extends AppCompatActivity {
             Intent chatIntent = new Intent(ProfileActivity.this, ChatRoomActivity.class);
             startActivity(chatIntent);
         });
-
-
-
     }
 
     @Override
