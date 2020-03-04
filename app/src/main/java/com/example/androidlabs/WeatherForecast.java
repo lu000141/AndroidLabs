@@ -49,11 +49,11 @@ public class WeatherForecast extends AppCompatActivity {
 //        tvMinTemp = findViewById(R.id.textView_minTemp);
 //        imageViewWeatherIcon = findViewById(R.id.imageView_weather);
 
-        Button btnWeatherQuery = findViewById(R.id.button_WeatherQuery);
-        btnWeatherQuery.setOnClickListener(v -> {
-            ForecastQuery forecastQuery = new ForecastQuery();
-            forecastQuery.execute();
-        });
+//        Button btnWeatherQuery = findViewById(R.id.button_WeatherQuery);
+//        btnWeatherQuery.setOnClickListener(v -> {
+        ForecastQuery forecastQuery = new ForecastQuery();
+        forecastQuery.execute();
+//        });
     }
 
     private class ForecastQuery extends AsyncTask<String, Integer, String> {
