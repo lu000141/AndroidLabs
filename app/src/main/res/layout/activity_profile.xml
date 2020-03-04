@@ -2,7 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_marginTop="27dp"
+    android:layout_marginBottom="27dp"
+    android:layout_marginLeft="48dp"
+    android:layout_marginRight="48dp"
+    >
 
     <TextView
         android:id="@+id/textView3"
@@ -25,7 +30,9 @@
         android:ems="10"
         android:hint="@string/name_hint"
         android:inputType="textPersonName"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:nextFocusUp="@id/buttongotochat"
+        android:nextFocusDown="@id/editText4"/>
 
     <TextView
         android:id="@+id/textView5"
@@ -41,7 +48,9 @@
         android:ems="10"
         android:hint="@string/email_hint"
         android:inputType="textPersonName"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:nextFocusUp="@id/editText3"
+        android:nextFocusDown="@id/imageButtonPicture"/>
 
     <TextView
         android:id="@+id/textView6"
@@ -54,7 +63,9 @@
         android:id="@+id/imageButtonPicture"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@android:drawable/picture_frame" />
+        android:src="@android:drawable/picture_frame"
+        android:nextFocusUp="@id/editText4"
+        android:nextFocusDown="@id/buttongotochat"/>
 
     <TextView
         android:id="@+id/textView7"
@@ -66,5 +77,8 @@
         android:id="@+id/buttongotochat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/ButtonText_GoToChat" />
+        android:text="@string/ButtonText_GoToChat"
+        android:nextFocusUp="@id/imageButtonPicture"
+        android:nextFocusDown="@id/editText3" />
+
 </LinearLayout>
