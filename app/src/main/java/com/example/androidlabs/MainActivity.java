@@ -44,6 +44,11 @@ public class MainActivity extends AppCompatActivity {
             startActivity(profilePage);
         });
 
+        Button toWeatherBtn = findViewById(R.id.toWeather);
+        toWeatherBtn.setOnClickListener(v->{
+            Intent weatherPage = new Intent(MainActivity.this, WeatherForecast.class);
+            startActivity(weatherPage);
+        });
     }
 
     @Override
