@@ -20,15 +20,17 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity android:name=".WeatherForecast">
+
+        </activity>
+        <activity android:name=".ChatRoomActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ChatRoomActivity" />
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
