@@ -89,7 +89,7 @@ public class WeatherForecast extends AppCompatActivity {
             textView.setText("Max Temperature:\t" + maxTemp);
 
             textView = findViewById(R.id.textView_minTemp);
-            textView.setText("Max Temperature:\t" + minTemp);
+            textView.setText("Min Temperature:\t" + minTemp);
 
             ImageView imageView = findViewById(R.id.imageView_weather);
             imageView.setImageBitmap(bmpWeather);
@@ -160,7 +160,7 @@ public class WeatherForecast extends AppCompatActivity {
                             publishProgress(50);
                             SystemClock.sleep(500);
 
-                            maxTemp = xpp.getAttributeValue(null, "min");
+                            maxTemp = xpp.getAttributeValue(null, "max");
                             Log.i("Weather Query AsyncTask", "Found parameter temperature: " + maxTemp);
                             publishProgress(75);
                             SystemClock.sleep(500);
