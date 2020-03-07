@@ -39,4 +39,7 @@
     <string name="HintText_chat">在这里输入</string>
 
     <string name="ButtonText_StartWeatherQuery">天气查询</string>
+    <string name="message_here">这里是信息</string>
+    <string name="idTitle">消息ID = </string>
+    <string name="hideButton">隐藏</string>
 </resources>

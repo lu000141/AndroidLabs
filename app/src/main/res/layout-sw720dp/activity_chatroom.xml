@@ -5,10 +5,13 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     >
-
+<RelativeLayout
+    android:id="@+id/chatRoomPanel"
+    android:layout_width="300dp"
+    android:layout_height="match_parent">
     <ListView
         android:id="@+id/listConversation"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/editTextChatMsg"
         android:layout_alignParentStart="true"
@@ -40,4 +43,11 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:text="@string/ButtonText_Receive" />
+</RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/messageFrame"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/chatRoomPanel"></FrameLayout>
 </RelativeLayout>

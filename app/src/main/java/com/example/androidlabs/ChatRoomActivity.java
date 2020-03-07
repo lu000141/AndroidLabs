@@ -37,7 +37,11 @@ public class ChatRoomActivity extends AppCompatActivity implements View.OnClickL
 
     private SQLiteDatabase db;
 
+    private boolean isTablet;
+
     public static final String ACTIVITY_NAME = "CHATROOM_ACTIVITY";
+    public static final String MESSAGE_Id = "messageId";
+    public static final String MESSAGE_Type = "messageId";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -48,6 +52,8 @@ public class ChatRoomActivity extends AppCompatActivity implements View.OnClickL
         dbOpener = new MyDatabaseOpenHelper(this);
         db = dbOpener.getWritableDatabase();
 
+        //check to see if app run in a tablet
+        isTablet = findViewById(R.id.messageFrame) != null;
 
         editText = findViewById(R.id.editTextChatMsg);
         ListView listConv = findViewById(R.id.listConversation);
@@ -89,6 +95,7 @@ public class ChatRoomActivity extends AppCompatActivity implements View.OnClickL
             }
         }
 
+        //set on click event to delete a message item
         listConv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int position, long id) {
@@ -115,6 +122,30 @@ public class ChatRoomActivity extends AppCompatActivity implements View.OnClickL
                 builder.show();
 
                 return true;
+            }
+        });
+
+        //set on click event to show details of a message item
+        listConv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Message message = adapter.getItem(position);
+
+                if(isTablet){
+                    //set data to be passed
+                    Bundle dataToPass = new Bundle();
+                    dataToPass.putLong(MESSAGE_Id,message.getId());
+                    dataToPass.putString(MESSAGE_Type,message.getType().toString());
+
+                    //set detail frame
+                    DetailsFragment dFrame = new DetailsFragment();
+                    dFrame.setArguments(dataToPass);
+                    dFrame.setTablet(isTablet);
+                    getSupportFragmentManager()
+                            .beginTransaction()
+                            .add(R.id.messageFrame,dFrame)
+                            .addToBackStack("AnyName").commit();
+                }
             }
         });
     }
@@ -154,7 +185,7 @@ public class ChatRoomActivity extends AppCompatActivity implements View.OnClickL
     /**
      * MessageType Enum Type
      */
-    private enum MessageType { SENT, RECEIVED }
+    public enum MessageType { SENT, RECEIVED }
 
     /**
      * Message representing class
