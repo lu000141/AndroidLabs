@@ -26,6 +26,7 @@ public class DetailsFragment extends Fragment {
     private String messageType;
     TextView showId;
     CheckBox isSendMessage;
+    Button hideBtn;
 
     public DetailsFragment() {
         // Required empty public constructor
@@ -53,6 +54,24 @@ public class DetailsFragment extends Fragment {
             isSendMessage.setChecked(false);
         }
 
+        hideBtn = view.findViewById(R.id.hideFrame);
+        hideBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(),"Hide Btn",Toast.LENGTH_LONG).show();
+                FragmentManager fm = getFragmentManager();
+                FragmentTransaction fragmentTransaction = fm.beginTransaction();
+                Fragment fragment = null;
+                if(isTablet) {
+                    fragment = fm.findFragmentById(R.id.messageFrame);
+                }else {
+                    fragment = fm.findFragmentById(R.id.emptyMessageDetailFrame);
+                }
+                fragmentTransaction.remove(fragment);
+                fragmentTransaction.commit();
+            }
+        });
+        
         return view;
     }
 
