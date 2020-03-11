@@ -46,7 +46,7 @@ public class ChatRoomActivity extends AppCompatActivity implements View.OnClickL
 
     public static final String ACTIVITY_NAME = "CHATROOM_ACTIVITY";
     public static final String MESSAGE_Id = "messageId";
-    public static final String MESSAGE_Type = "messageId";
+    public static final String MESSAGE_Type = "messageType";
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
