@@ -5,11 +5,15 @@
     <uses-feature
         android:name="android.hardware.Camera2"
         android:required="true" />
+
     <uses-permission android:name="android.permission.INTERNET" />
 
-    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
-    <uses-feature android:name="android.software.leanback" android:required="true"/>
-
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -19,12 +23,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".WeatherForecast">
-
-        </activity>
+        <activity android:name=".EmptyActivity"></activity>
+        <activity android:name=".WeatherForecast"></activity>
         <activity android:name=".ChatRoomActivity" />
         <activity android:name=".ProfileActivity" />
-        <activity android:name=".MainActivity" >
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

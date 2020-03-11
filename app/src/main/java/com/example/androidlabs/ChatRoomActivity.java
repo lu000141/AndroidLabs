@@ -2,6 +2,7 @@ package com.example.androidlabs;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 
 
@@ -27,6 +28,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
+import java.util.HashMap;
+
 public class ChatRoomActivity extends AppCompatActivity implements View.OnClickListener{
 
     private EditText editText;
@@ -36,6 +39,8 @@ public class ChatRoomActivity extends AppCompatActivity implements View.OnClickL
     private MyDatabaseOpenHelper dbOpener;
 
     private SQLiteDatabase db;
+
+    private HashMap<Message,DetailsFragment> openedFragments;
 
     private boolean isTablet;
 
@@ -51,6 +56,9 @@ public class ChatRoomActivity extends AppCompatActivity implements View.OnClickL
         //get a database:
         dbOpener = new MyDatabaseOpenHelper(this);
         db = dbOpener.getWritableDatabase();
+
+        //initialize a hashmap for storing current open fragments
+        openedFragments = new HashMap<>();
 
         //check to see if app run in a tablet
         isTablet = findViewById(R.id.messageFrame) != null;
@@ -111,6 +119,13 @@ public class ChatRoomActivity extends AppCompatActivity implements View.OnClickL
                         db.delete(MyDatabaseOpenHelper.TABLE_NAME,MyDatabaseOpenHelper.COL_ID+"=?",new String[]{msg.getId()+""});
                         adapter.remove(msg);
                         adapter.notifyDataSetChanged();
+
+                        //remove the fragment when a message is deleted
+                        if(openedFragments.containsKey(msg)){
+                            DetailsFragment detailsFragment = openedFragments.get(msg);
+                            detailsFragment.removeFragment();
+                            openedFragments.remove(msg);
+                        }
                     }
                 }).setNegativeButton("No", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
@@ -130,13 +145,11 @@ public class ChatRoomActivity extends AppCompatActivity implements View.OnClickL
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Message message = adapter.getItem(position);
-
+                //set data to be passed
+                Bundle dataToPass = new Bundle();
+                dataToPass.putLong(MESSAGE_Id,id);
+                dataToPass.putString(MESSAGE_Type,message.getType().toString());
                 if(isTablet){
-                    //set data to be passed
-                    Bundle dataToPass = new Bundle();
-                    dataToPass.putLong(MESSAGE_Id,message.getId());
-                    dataToPass.putString(MESSAGE_Type,message.getType().toString());
-
                     //set detail frame
                     DetailsFragment dFrame = new DetailsFragment();
                     dFrame.setArguments(dataToPass);
@@ -145,6 +158,20 @@ public class ChatRoomActivity extends AppCompatActivity implements View.OnClickL
                             .beginTransaction()
                             .add(R.id.messageFrame,dFrame)
                             .addToBackStack("AnyName").commit();
+
+                    //remove former fragments before opening a new fragment
+                    if(!openedFragments.isEmpty()){
+                        for(DetailsFragment fragment:openedFragments.values()){
+                            fragment.removeFragment();
+                        }
+                    }
+
+                    openedFragments.put(message,dFrame);
+                }else{
+                    Intent intent = new Intent(ChatRoomActivity.this,EmptyActivity.class);
+                    intent.putExtras(dataToPass);
+                    startActivity(intent);
+
                 }
             }
         });
