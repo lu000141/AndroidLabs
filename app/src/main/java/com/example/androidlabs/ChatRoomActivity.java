@@ -110,6 +110,7 @@ public class ChatRoomActivity extends AppCompatActivity implements View.OnClickL
 
 //                Toast.makeText(getApplicationContext(),"Test",Toast.LENGTH_LONG).show();
                 AlertDialog.Builder builder = new AlertDialog.Builder(listConv.getContext());
+                builder.setTitle("Do you want to delete the message?");
                 String message = "The selected row is: "+position+"\n"+"The database id id: "+id;
                 builder.setMessage(message).setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
