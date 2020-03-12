@@ -49,5 +49,6 @@
         android:id="@+id/messageFrame"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_toRightOf="@id/chatRoomPanel"></FrameLayout>
+        android:layout_toRightOf="@id/chatRoomPanel"
+        android:background="@color/design_default_color_primary_dark"></FrameLayout>
 </RelativeLayout>
