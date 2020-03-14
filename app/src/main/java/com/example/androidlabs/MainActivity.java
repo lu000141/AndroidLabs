@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     SharedPreferences prefs;
     EditText editEmail;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
             Intent weatherPage = new Intent(MainActivity.this, WeatherForecast.class);
             startActivity(weatherPage);
         });
+
     }
 
     @Override
