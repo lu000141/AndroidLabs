@@ -17,6 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class ProfileActivity extends AppCompatActivity {
     static final int REQUEST_IMAGE_CAPTURE = 1;
     public static final String ACTIVITY_NAME = "PROFILE_ACTIVITY";
+    public static final int REQUEST_TOOLBAR = 2;
     ImageButton imageButton;
 
     @Override
@@ -70,6 +71,12 @@ public class ProfileActivity extends AppCompatActivity {
             Intent chatIntent = new Intent(ProfileActivity.this, ChatRoomActivity.class);
             startActivity(chatIntent);
         });
+
+        Button toTestToolbar = findViewById(R.id.goToTestToolbar);
+        toTestToolbar.setOnClickListener( v->{
+            Intent testToolbarPage = new Intent(ProfileActivity.this, TestToolbar.class);
+            startActivityForResult(testToolbarPage,REQUEST_TOOLBAR);
+        });
     }
 
     @Override
@@ -98,6 +105,10 @@ public class ProfileActivity extends AppCompatActivity {
             Bitmap imageBmp = (Bitmap)extras.get("data");
             imageButton = findViewById(R.id.imageButtonPicture);
             imageButton.setImageBitmap(imageBmp);
+        }
+
+        if( requestCode == REQUEST_TOOLBAR && resultCode == TestToolbar.REQUEST_RESULT){
+            finish();
         }
     }
 }

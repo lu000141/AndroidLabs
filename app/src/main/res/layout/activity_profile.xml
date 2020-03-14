@@ -81,4 +81,10 @@
         android:nextFocusUp="@id/imageButtonPicture"
         android:nextFocusDown="@id/editText3" />
 
+    <Button
+        android:id="@+id/goToTestToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/toTestToolbar"/>
+
 </LinearLayout>

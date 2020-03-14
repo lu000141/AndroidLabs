@@ -41,4 +41,8 @@
     <string name="message_here">Message Here</string>
     <string name="idTitle">ID = </string>
     <string name="hideButton">Hide</string>
+    <string name="toTestToolbar">Go to Toolbar page</string>
+    <string name="nav_chat">Chat Page</string>
+    <string name="nav_weather">Weather Forecast</string>
+    <string name="nav_login">Go Back To Login</string>
 </resources>

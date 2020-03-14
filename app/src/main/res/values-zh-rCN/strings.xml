@@ -42,4 +42,8 @@
     <string name="message_here">这里是信息</string>
     <string name="idTitle">消息ID = </string>
     <string name="hideButton">隐藏</string>
+    <string name="toTestToolbar">跳转工具条测试页面</string>
+    <string name="nav_chat">聊天室</string>
+    <string name="nav_weather">天气预报</string>
+    <string name="nav_login">回到登录页面</string>
 </resources>
