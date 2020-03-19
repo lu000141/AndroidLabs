@@ -5,21 +5,66 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_marginTop="27dp"
+    android:layout_marginBottom="27dp"
+    android:layout_marginLeft="48dp"
+    android:layout_marginRight="48dp"
+    >
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_message"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button"
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/ButtonText" />
+        android:text="@string/email_notification"
+        android:textSize="24sp"
+        />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/email_hint"
+        android:inputType="textEmailAddress"
+        android:textSize="18sp"
+        android:nextFocusUp="@id/toWeather"
+        android:nextFocusDown="@id/editText2"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/password_notification"
+        android:textSize="24sp"
+        android:nextFocusUp="@id/editTextEmail"
+        android:nextFocusDown="@id/editText2" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:textSize="18sp"
+        android:nextFocusUp="@id/editTextEmail"
+        android:nextFocusDown="@id/login"/>
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login_button_text"
+        android:textSize="24sp"
+        android:nextFocusUp="@id/editText2"
+        android:nextFocusDown="@id/toWeather"/>
+
+    <Button
+        android:id="@+id/toWeather"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Weather Forecast"
+        android:nextFocusUp="@id/login"
+        android:nextFocusDown="@id/editTextEmail"/>
 
 </LinearLayout>

@@ -1,5 +1,44 @@
 <resources>
-    <string name="app_name">Android Lab1</string>
+    <string name="app_name">Android Labs</string>
     <string name="hello_message">Hello World!</string>
     <string name="ButtonText">I\’m a button</string>
+
+    <string name="HeaderText">Look at my GUI:</string>
+    <string name="ButtonText2">CLICK HERE</string>
+    <string name="CheckText">Check this out!</string>
+    <string name="ImageBtnDescription">National Flag</string>
+    <string name="SwitchText">Switch on / off</string>
+    <string name="HintText">Type here</string>
+    <string name="switch_on"> The switch is on</string>
+    <string name="switch_off">Type switch is off </string>
+    <string name="toast_message"> Here is more information </string>
+    <string name="check_off">The checkbox is on</string>
+    <string name="check_on">Type checkbox is off</string>
+
+    <string name="email_notification">Enter your Email address:</string>
+    <string name="email_hint">Type email here</string>
+    <string name="password_notification">Type your password:</string>
+    <string name="login_button_text">LOGIN</string>
+
+
+    <string name="preference_file_key">FileName</string>
+    <string name="preference_reserved_email">EmailAddress</string>
+    <string name="profile_header_label">Your profile</string>
+    <string name="profile_name_label">Your name:</string>
+    <string name="profile_email_label">Your email:</string>
+    <string name="profile_picure_label">Your picture:</string>
+    <string name="name_hint">Type your name here</string>
+    <string name="take_picture_hint">Click the button above to take a picture</string>
+
+    <string name="ButtonText_GoToChat">Go to chat</string>
+    <string name="ButtonText_Send">Send</string>
+    <string name="ButtonText_Receive">Receive</string>
+    <string name="HintText_chat">Type here</string>
+
+    <string name="ButtonText_StartWeatherQuery">Weather Query</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="message_here">Message Here</string>
+    <string name="idTitle">ID = </string>
+    <string name="hideButton">Hide</string>
 </resources>

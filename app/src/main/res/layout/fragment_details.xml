@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/messageHere"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/message_here" />
+
+    <TextView
+        android:id="@+id/idTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/messageHere"
+        android:text="@string/idTitle" />
+
+    <TextView
+        android:id="@+id/msgId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/idTitle"
+        android:layout_below="@id/messageHere"
+        android:text=""/>
+
+    <CheckBox
+        android:id="@+id/isSendMsg"
+        android:layout_below="@id/idTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Is a Send Message" />
+
+    <Button
+        android:id="@+id/hideFrame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/hideButton"/>
+</RelativeLayout>
+</FrameLayout>
